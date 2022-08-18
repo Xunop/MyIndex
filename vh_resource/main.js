@@ -459,7 +459,7 @@ function caliButton(TakiIn) {
         imgStatue2: 'qicao_stand2',
         linkToName: "穿梭",
       });
-      linkToSrc = "./one.html";
+      linkToSrc = "/one.html";
       break;
     case 'music':
       cleanChrImg();
