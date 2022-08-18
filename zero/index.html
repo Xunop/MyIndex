@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+  <title>xun</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="keywords" content="asuka-xun.cc,hexo,java,java web,学习笔记">
+  <meta name="description" content="xun的个人主页，计算机科学，学习笔记">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit|ie-stand|ie-comp">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="../one/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://notes.zhangxiaocai.cn/favicon.ico"> -->
+  <link rel="stylesheet" type="text/css" href="vh_resource/va11.css" />
+  <link rel="stylesheet" type="text/css" href="./vh_resource/font/DinkieBitMap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="vh_resource/crt_effect.css" />
+</head>
+
+<body>
+  <input hidden="true" type="checkbox" id="switch" checked>
+  <div class="crt_container">
+
+    <!-- <label for="switch" class="switch-label"> </label><a>@2021</a>·<a href="http://beian.miit.gov.cn/" target="_blank" class="beian">鄂ICP备19015637号-1</a>·<a href="http://icp.gov.moe/?keyword=20210108" target="_blank" class="beian">萌ICP备20210108号</a> -->
+    <!-- BGM -->
+    <!-- will you remember me -->
+    <!-- <audio src='http://music.163.com/song/media/outer/url?id=441491914.mp3' style='display:inline' volume="0.5" id="will_you_remember_me"></audio> -->
+    <!-- a gaze that invited disaster -->
+    <!-- <audio src='http://music.163.com/song/media/outer/url?id=441489910.mp3' style='display:inline' volume="0.5" id="a_gaze_that_invited_disaster"></audio> -->
+    <!-- meet the staff -->
+    <!-- <audio src='http://music.163.com/song/media/outer/url?id=441489930.mp3' style='display:inline' volume="0.5" id="meet_the_staff"></audio> -->
+    <!-- neo avatar -->
+    <!-- <audio src='http://music.163.com/song/media/outer/url?id=441491897.mp3' style='display:inline' volume="0.5" id="neo_avatar"></audio> -->
+    <!-- strictly business -->
+    <!-- <audio src='http://music.163.com/song/media/outer/url?id=441489938.mp3' style='display:inline' volume="0.5" id="strictly_business"></audio> -->
+
+    <!-- winter -->
+    <div id="winter" class="snow-container">
+      <div class="snow foreground"></div>
+      <div class="snow foreground layered"></div>
+      <div class="snow middleground"></div>
+      <div class="snow middleground layered"></div>
+      <div class="snow background"></div>
+      <div class="snow background layered"></div>
+    </div>
+
+
+    <div id="backgroundDiv"></div>
+    <div class="mainWindow">
+
+      <div class="talkingBox">
+        <div class="characterIMG">
+
+          <img src="vh_resource/qicao/qicao_yo.png" id="qicao_yo" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_yo.png" id="qicao_yo2" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_red.png" id="qicao_red" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_red.png" id="qicao_red2" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_cos.png" id="qicao_cos" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_cos.png" id="qicao_cos2" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_stand.png" id="qicao_stand" class="qicaoImg">
+          <img src="vh_resource/qicao/qicao_stand.png" id="qicao_stand2" class="qicaoImg">
+
+        </div>
+
+        <div class="textBox">
+          <!-- <a class="characterName" id="qicao" href="https://auka-xun.cc/one">七草 ナズナ:</a> -->
+          <a class="characterName" id="qicao" href="../one">七草 ナズナ:</a>
+          <span class="writer" id="dialog_1"></span>
+          <p id="textPointer">▼</p>
+          <!-- <audio src='vh_resource/anna/talkSound_anna.mp3' style='display:inline' id='talkSound1'></audio>
+          <audio src='vh_resource/anna/talkSound_anna.mp3' style='display:inline' id='talkSound2'></audio>
+          <audio src='vh_resource/anna/talkSound_anna.mp3' style='display:inline' id='talkSound3'></audio>
+          <audio src='vh_resource/anna/talkSound_anna.mp3' style='display:inline' id='talkSound4'></audio>
+          <audio src='vh_resource/anna/talkSound_anna.mp3' style='display:inline' id='talkSound5'></audio> -->
+        </div>
+
+        <div class="linkBox" id="linkBoxId">
+          <span class="linkToWhereText" id="linkTo">前往"asuka-xun.cc"</span>
+          <p class="linkBoxPointer">→</p>
+          <button type="button" class="caliButton" onclick="jumptoLink()" id="linkButton_pink"></button>
+        </div>
+
+      </div>
+
+
+      <div class="calicompFrame" id="calicompFrameInside_ID">
+        <!-- <audio src='vh_resource/other/sys_sound_1.mp3' style='display:inline' id='sys_sound_1'></audio>
+        <audio src='vh_resource/other/sys_sound_2.mp3' style='display:inline' id='sys_sound_2'></audio>
+        <audio src='vh_resource/other/sys_sound_3.mp3' style='display:inline' id='sys_sound_3'></audio>
+        <audio src='vh_resource/other/sys_sound_4.mp3' style='display:inline' id='sys_sound_4'></audio> -->
+
+        <p id="byType_" class="calicompFrameMenu">Xun</p>
+
+
+        <div class="calicompFrameInside">
+          <div id="calicompFrame_disable"></div>
+          <div id="calicompFrame_aboutBox">
+            <div class="linkBox_aboutBack" id="linkBoxId">
+              <span class="linkToWhereText">返回</span>
+              <p class="linkBoxPointer">←</p>
+              <button type="button" class="caliButton_aboutBack" onclick="aboutBack()" id="linkButton_pink"></button>
+            </div>
+            <img src="https://asuka-xun.cc/assets/mybatisplus.jpg" width="100%">
+            <h1>关于 </h1>
+            <p>
+              <li>本页面由tonoko所撰写</li>
+            </p>
+            <p>
+              <li>本页面由张小菜个人引导页改编而来</li>
+            </p>
+            <p>
+              <li>背景图像:<a href="https://twitter.com/waneella_" target="_blank">twiiter @waneella_</a></li>
+            </p>
+            <p>
+              <li>像素字体:丁卯点阵体</a></li>
+            </p>
+
+            <p>Packaged at 2022/8/18</p>
+            <p>asuka-xun.cc 2022.8 copyright</p>
+            <br>
+          </div>
+
+          <p class="calicompFrameTitle">不失去热情</p>
+
+          <div class="calicompButtonFrame">
+            <!-- <img src="vh_resource/drink/SunshineCloud.png" class="caliDrinkImg"> -->
+            <div class="calicompIconImg" style="background-image: url(vh_resource/drink/SunshineCloud.png);"></div>
+            <div class="calicompButtonFrameTextBox">
+              <p class="calicompButtonFrameText1">博客</p>
+              <p class="calicompButtonFrameText2">xun</p>
+            </div>
+            <button type="button" class="caliButton" onclick="caliButton('blog')" id="caliButton_yellow"></button>
+          </div>
+
+          <div class="calicompButtonFrame">
+            <!-- <img src="vh_resource/drink/SugarRush.png" class="caliDrinkImg"> -->
+            <div class="calicompIconImg" style="background-image: url(vh_resource/drink/SugarRush.png);"></div>
+            <div class="calicompButtonFrameTextBox">
+              <p class="calicompButtonFrameText1">哔哩哔哩</p>
+              <p class="calicompButtonFrameText2">😋</p>
+            </div>
+            <button type="button" class="caliButton" onclick="caliButton('bilibili')" id="caliButton_red"></button>
+          </div>
+
+          <div class="calicompButtonFrame">
+            <!-- <img src="vh_resource/drink/BlueFairy.png" class="caliDrinkImg"> -->
+            <div class="calicompIconImg" style="background-image: url(vh_resource/drink/BlueFairy.png);"></div>
+            <div class="calicompButtonFrameTextBox">
+              <p class="calicompButtonFrameText1">github</p>
+              <p class="calicompButtonFrameText2">🤺</p>
+            </div>
+            <button type="button" class="caliButton" onclick="caliButton('gitHub')" id="caliButton_blue"></button>
+          </div>
+
+          <div class="calicompButtonFrame">
+            <!-- <img src="vh_resource/drink/BloomLight.png" class="caliDrinkImg"> -->
+            <div class="calicompIconImg" style="background-image: url(vh_resource/drink/BloomLight.png);"></div>
+            <div class="calicompButtonFrameTextBox">
+              <p class="calicompButtonFrameText1">leetcode</p>
+              <p class="calicompButtonFrameText2">寻</p>
+            </div>
+            <button type="button" class="caliButton" onclick="caliButton('leetcode')" id="caliButton_red"></button>
+          </div>
+
+
+
+          <div class="calicompButtonFrame">
+            <!-- <img src="vh_resource/drink/SparkleStar.png" class="caliDrinkImg"> -->
+            <div class="calicompIconImg" style="background-image: url(vh_resource/drink/SparkleStar.png);"></div>
+            <div class="calicompButtonFrameTextBox">
+              <p class="calicompButtonFrameText1">网易云音乐</p>
+              <p class="calicompButtonFrameText2">🎶</p>
+            </div>
+            <button type="button" class="caliButton" onclick="caliButton('music')" id="caliButton_red"></button>
+          </div>
+
+          <div class="calicompButtonFrame">
+
+            <div class="calicompIconImg" style="background-image: url(vh_resource/drink/PianoWoman.png);"></div>
+            <div class="calicompButtonFrameTextBox">
+              <p class="calicompButtonFrameText1">one</p>
+              <p class="calicompButtonFrameText2">/one</p>
+            </div>
+            <button type="button" class="caliButton" onclick="caliButton('timeBack')" id="caliButton_blue"></button>
+          </div>
+
+          <!-- <div class="calicompButtonFrame">
+           <div class="calicompIconImg"  style="background-image: url(vh_resource/drink/Beer.png);"></div>
+          <div class="calicompButtonFrameTextBox">
+            <p class="calicompButtonFrameText1">Steam</p>
+            <p class="calicompButtonFrameText2">/antonoko</p>
+          </div>
+          <button type="button" class="caliButton"  onclick="caliButton('steam')" id="caliButton_orange"></button>
+        </div>
+
+        <div class="calicompButtonFrame">
+           <div class="calicompIconImg"  style="background-image: url(vh_resource/drink/FlamingMoai.png);"></div>
+          <div class="calicompButtonFrameTextBox">
+            <p class="calicompButtonFrameText1">Nintendo</p>
+            <p class="calicompButtonFrameText2">Switch</p>
+          </div>
+          <button type="button" class="caliButton"  onclick="caliButton('switch')" id="caliButton_purple"></button>
+        </div> -->
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+      <div class="calicompFrameOutside" id="calicompFrameOutside_ID">
+        <button type="button" id="buttonMin" onclick="caliWinClose()">-</button>
+        <div class="timeBox"><span id="nowDateTimeSpan"></span></div>
+        <div class="timeBoxBG">
+          <p style="color:rgba(0, 0, 0, 0);display: inline;">H△g</p>&nbsp&nbsp&nbsp&nbsp&nbsp88:88
+        </div>
+
+        <div id="calicompFrame_disable2"></div>
+        <img src="vh_resource/other/calicomptitle1.png" class="calicompFrameOutsideIMG">
+        <button type="button" class="caliButton" onclick="caliButton('about')" id="caliButton_black"></button>
+      </div>
+
+    </div>
+
+
+    <script src="vh_resource/type.js" charset="utf-8"></script>
+    <script src="vh_resource/main.js" charset="utf-8"></script>
+
+    <!-- 错误诊断页面 -->
+    <div class="CRASHED" id="CRASHED_STATUE">
+      <div class="CRASHED_BOX">
+        <img src="vh_resource/other/calicomptitle1.png" width="120px">
+        <center>
+          <p class="CRASHED_TEXT">
+            &#42;&#42;&#42;&#42;&#32;&#67;&#79;&#77;&#77;&#79;&#68;&#79;&#82;&#69;&#32;&#54;&#52;&#32;&#72;&#79;&#83;&#84;&#75;&#69;&#82;&#32;&#42;&#42;&#42;&#42;
+          </p>
+        </center>
+        <center>
+          <p class="CRASHED_TEXT">
+            &#54;&#52;&#75;&#32;&#82;&#65;&#77;&#32;&#83;&#89;&#83;&#84;&#69;&#77;&#32;&#32;&#51;&#56;&#57;&#49;&#49;&#32;&#66;&#65;&#83;&#73;&#67;&#32;&#66;&#89;&#84;&#69;&#83;&#32;&#70;&#82;&#69;&#69;
+          </p>
+        </center>
+        <p class="CRASHED_TEXT">&#82;&#69;&#65;&#68;&#89;&#46;</p><br>
+        <p class="CRASHED_TEXT">
+          &#67;&#65;&#76;&#73;&#67;&#79;&#77;&#80;&#32;&#85;&#73;&#32;&#76;&#79;&#65;&#68;&#73;&#78;&#71;&#46;&#46;&#46;&#12288;&#12288;&#12288;&#12288;&#12288;&#12288;&#12288;&#53;&#37;
+        </p>
+        <p class="CRASHED_TEXT">
+          &#67;&#65;&#84;&#65;&#83;&#84;&#82;&#79;&#80;&#72;&#73;&#67;&#32;&#70;&#65;&#73;&#76;&#85;&#82;&#69;&#32;&#72;&#65;&#80;&#80;&#69;&#78;
+        </p>
+        <p class="CRASHED_TEXT">&#49;&#48;&#32;&#80;&#82;&#73;&#78;&#84;</p><br>
+        <p class="CRASHED_TEXT">&#21908;&#21727;&#65292;&#23849;&#28291;&#21862;&#65281;</p>
+        <p class="CRASHED_TEXT">
+          &#21152;&#36733;&#27492;&#31995;&#32479;&#26102;&#20986;&#20102;&#28857;&#38382;&#39064;&#12290;</p>
+        <p class="CRASHED_TEXT" id="CRASHED_REASON">错误代码变量</p><br>
+        <p class="CRASHED_TEXT">请重新启动系统。(如果是网页的话，那应该是刷新)</p>
+      </div>
+    </div>
+
+
+    <div class="crt_overlay">AV-1</div>
+  </div>
+  <!-- Footer -->
+
+  <footer id="footer">
+    <span class="meng"> © 2022 🎉 xun </span>
+    <a href="https://icp.gov.moe/?keyword=20220794" target="_blank" style="color:inherit">萌ICP备20220794号</a>
+    
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">| 本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+  </footer>
+</body>
+
+</html>
