@@ -459,7 +459,7 @@ function caliButton(TakiIn) {
         imgStatue2: 'qicao_stand2',
         linkToName: "穿梭",
       });
-      linkToSrc = "/one.html";
+      linkToSrc = "https://asuka-xun.cc/one";
       break;
     case 'music':
       cleanChrImg();
